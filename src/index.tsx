@@ -2,10 +2,12 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import {BrowserRouter} from "react-router-dom";
 
-import App from "./App";
+import App from "app/App";
+import ThemeProvider from "app/providers/themeProvider/ui/ThemeProvider";
 
-import './pages/styles/index.scss';
-import ThemeProvider from "./theme/ThemeProvider";
+import "shared/config/i18n/i18n";
+
+import 'app/styles/index.scss';
 
 const rootElement = document.getElementById("root");
 
