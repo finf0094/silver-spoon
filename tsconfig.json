@@ -22,8 +22,8 @@
   "include": [
     "./src/**/*",
     ".eslintrc.js",
+    "./webpack.config.ts",
     ".stylelintrc.js.",
-    "./config/**/*",
-    ".webpack.config.ts"
+    "./config/**/*"
   ]
 }
