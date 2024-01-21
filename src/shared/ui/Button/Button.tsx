@@ -1,19 +1,19 @@
-import React, {FC, ReactNode} from 'react';
+import React, { type FC, type ReactNode } from 'react'
 
-import {classNames} from "shared/lib/classNames/classNames"
+import { classNames } from 'shared/lib/classNames/classNames'
 
-import cls from './Button.module.scss';
-
+import cls from './Button.module.scss'
 
 export enum ThemeButton {
     CLEAR = 'clear'
 }
 
 interface ButtonProps {
-    className?: string;
-    children: ReactNode;
-    theme?: ThemeButton;
-    [key: string]: any;
+    className?: string
+    children: ReactNode
+    theme?: ThemeButton
+
+    [key: string]: any
 }
 
 const Button: FC<ButtonProps> = (props) => {
@@ -22,14 +22,14 @@ const Button: FC<ButtonProps> = (props) => {
         children,
         theme,
         ...otherProps
-    } = props;
+    } = props
 
     return (
         <button className={classNames(cls.Button, {}, [className, cls[theme]])}
-                {...otherProps}>
+            {...otherProps}>
             {children}
         </button>
-    );
-};
+    )
+}
 
-export default Button;
+export default Button
