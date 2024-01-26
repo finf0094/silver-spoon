@@ -7,7 +7,8 @@ module.exports = {
     extends: [
         'standard-with-typescript',
         'plugin:react/recommended',
-        'plugin:i18next/recommended'
+        'plugin:i18next/recommended',
+        'plugin:storybook/recommended'
     ],
     overrides: [
         {
@@ -37,6 +38,7 @@ module.exports = {
         'react/jsx-uses-vars': 'error',
         'react/jsx-indent': [2, 4],
         'react/react-in-jsx-scope': 'off',
+        'react/display-name': 'off',
         '@typescript-eslint/prefer-nullish-coalescing': 'off',
         '@typescript-eslint/strict-boolean-expressions': 'off',
         '@typescript-eslint/indent': [2, 4],
