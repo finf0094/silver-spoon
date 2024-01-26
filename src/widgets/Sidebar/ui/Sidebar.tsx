@@ -1,7 +1,7 @@
 import React, { type FC, useState } from 'react'
 
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 import { LangSwitcher } from 'widgets/LangSwitcher'
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 import Button, { ThemeButton } from 'shared/ui/Button/Button'
@@ -21,6 +21,7 @@ const Sidebar: FC<SidebarProps> = ({ className }) => {
 
     return (
         <div
+            data-testid='sidebar'
             className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}
         >
             <Button theme={ThemeButton.CLEAR} onClick={onToggle}>toggle</Button>

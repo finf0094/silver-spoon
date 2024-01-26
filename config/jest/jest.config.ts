@@ -27,7 +27,15 @@ const config: Config = {
     ],
     testMatch: [
         '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
-    ]
+    ],
+    modulePaths: [
+        '<rootDir>src'
+    ],
+    setupFilesAfterEnv: ['<rootDir>/config/jest/jest-setup.ts'],
+    moduleNameMapper: {
+        '\\.(css|scss)$': 'identity-obj-proxy',
+        '^.+\\.svg$': 'jest-svg-transformer'
+    }
 
     // All imported modules in your tests should be mocked automatically
     // automock: false,

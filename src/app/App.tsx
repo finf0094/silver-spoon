@@ -5,6 +5,7 @@ import { AppRouter } from 'app/providers/router'
 
 import { Navbar } from 'widgets/Navbar'
 import { Sidebar } from 'widgets/Sidebar'
+import { PageLoader } from 'widgets/PageLoader'
 
 import { classNames } from 'shared/lib/classNames/classNames'
 
@@ -13,7 +14,7 @@ const App: FC = () => {
 
     return (
         <div className={classNames('app', {}, [theme])}>
-            <Suspense fallback="">
+            <Suspense fallback={<PageLoader/>}>
                 <Navbar/>
                 <div className="content-page">
                     <Sidebar/>

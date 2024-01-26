@@ -1,9 +1,12 @@
 import React from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
+import { ErrorBoundary } from 'react-error-boundary'
 
 import App from 'app/App'
 import ThemeProvider from 'app/providers/themeProvider/ui/ThemeProvider'
+
+import { ErrorPage } from 'pages/ErrorPage'
 
 import 'shared/config/i18n/i18n'
 
@@ -18,9 +21,11 @@ const root = createRoot(rootElement)
 root.render(
     <React.StrictMode>
         <BrowserRouter>
-            <ThemeProvider>
-                <App />
-            </ThemeProvider>
+            <ErrorBoundary fallback={<ErrorPage/>}>
+                <ThemeProvider>
+                    <App />
+                </ThemeProvider>
+            </ErrorBoundary>
         </BrowserRouter>
     </React.StrictMode>
 )

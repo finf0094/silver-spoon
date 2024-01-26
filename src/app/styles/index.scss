@@ -2,12 +2,15 @@
 @import "variables/global";
 @import "themes/dark";
 @import "themes/normal";
+@import 'https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Raleway:wght@300;400;500;600;700&display=swap';
 
 .app {
   font: var(--font-m);
   background: var(--bg-color);
   color: var(--primary-color);
   min-height: 100vh;
+  font-family: Montserrat, sans-serif;
+  font-weight: 500;
 }
 
 .content-page {

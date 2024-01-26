@@ -11,7 +11,10 @@
         }
       }
     ],
-    ["@babel/preset-typescript"]
+    ["@babel/preset-typescript"],
+    ["@babel/preset-react", {
+      "runtime": "automatic"
+    }]
   ],
   "plugins": ["i18next-extract"]
 }
